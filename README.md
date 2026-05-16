@@ -47,21 +47,29 @@ This is the **foundation project** of the portfolio — demonstrating Page Objec
 
 ```
 SauceDemoAutomation/
-├── src/
-│   ├── main/java/
-│   │   ├── base/
-│   │   │   └── BaseClass.java          ← static WebDriver, @BeforeClass, @AfterClass
-│   │   └── pages/
-│   │       ├── LoginPage.java          ← Login module
-│   │       ├── ProductsPage.java       ← Add to cart module
-│   │       ├── CartPage.java           ← Cart module
-│   │       ├── CheckoutPage.java       ← Checkout module
-│   │       └── OrderPage.java          ← Order confirmation module
-│   └── test/java/
-│       └── tests/
-│           └── TestRun.java     ← 5 @Test methods
-├── pom.xml
-└── testng.xml
+├── pom.xml                           ← Maven build & dependency configuration  
+├── testng.xml                         ← TestNG suite configuration              
+├── drivers/                           ← ChromeDriver executable
+├── screenshots/                       ← Auto-created; stores test screenshots
+└── src/
+    ├── main/
+    │   └── java/
+    │       ├── base/
+    │       │   └── BaseClass.java     ← WebDriver setup & teardown             
+    │       ├── pages/
+    │       │   ├── LoginPage.java
+    │       │   ├── ProductPage.java
+    │       │   ├── CartPage.java
+    │       │   ├── CheckoutPage.java
+    │       │   ├── CheckoutOverviewPage.java
+    │       │   ├── CheckoutCompletePage.java
+    │       │   └── LogoutPage.java
+    │       └── utils/
+    │           └── ScreenshotUtils.java
+    └── test/
+        └── java/
+            └── tests/
+                └── TestRun.java       ← TestNG test class (replaces main()) 
 ```
 
 ---
